@@ -17,7 +17,7 @@ An example of it in useage within an app would look like this
 
 ```coffeescript
 path = require 'path'
-express = require 'express' 
+{Router} = require 'express' 
 expressDev = require 'express-dev'
 config = require './config/webpack.dev.config'
 
@@ -25,7 +25,7 @@ app = expressDev(config)
 app.set 'views', path.join(process.cwd(), 'src', 'views')
 app.set 'view engine', 'jade'
 
-router = express.Router()
+router = Router()
 router.get('/', (req, res, next) -> res.render 'index' )
 
 app.use(router)
