@@ -1,6 +1,6 @@
 {
   "name": "express-dev",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "express wrapper containing webpack dev middleware and hot middleware",
   "main": "build/index.js",
   "dependencies": {
