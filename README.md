@@ -1,3 +1,6 @@
+[![Build Status](https://api.travis-ci.org/madole/express-dev.svg)](https://api.travis-ci.org/madole/express-dev.svg) 
+[![npm version](https://badge.fury.io/js/express-dev.svg)](http://badge.fury.io/js/express-dev)
+
 ##Express-Dev
 
 An express wrapper which takes in a [webpack](https://webpack.github.io/) config and retuns you an express app with [webpack dev middleware](https://github.com/webpack/webpack-dev-middleware) and [webpack hot middleware ](https://github.com/glenjamin/webpack-hot-middleware) in the stack. 
