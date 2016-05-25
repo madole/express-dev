@@ -15,23 +15,6 @@ You can add your own middlewares to this app instance just as you would with a s
 
 An example of it in usage within an app would look like this 
 
-```coffeescript
-path = require 'path'
-{Router} = require 'express' 
-expressDev = require 'express-dev'
-config = require './config/webpack.dev.config'
-
-app = expressDev(config)
-app.set 'views', path.join(process.cwd(), 'src', 'views')
-app.set 'view engine', 'jade'
-
-router = new Router()
-router.get('/', (req, res, next) -> res.render 'index' )
-
-app.use(router)
-app.listen(3000, -> console.log 'listening on 3000')
-```
-
 JS Example
 ```javascript
 import path from 'path';
@@ -49,6 +32,25 @@ router.get('/', (req, res, next) => res.render('index'));
 app.use(router);
 app.listen(3000, () => console.log('listening on port 3000'));
 ```
+
+Coffeescript example
+```coffeescript
+path = require 'path'
+{Router} = require 'express' 
+expressDev = require 'express-dev'
+config = require './config/webpack.dev.config'
+
+app = expressDev(config)
+app.set 'views', path.join(process.cwd(), 'src', 'views')
+app.set 'view engine', 'jade'
+
+router = new Router()
+router.get('/', (req, res, next) -> res.render 'index' )
+
+app.use(router)
+app.listen(3000, -> console.log 'listening on 3000')
+```
+
 
 Now you can dev your front end code with hot module reloading if it can do it, or live reloading if it cant. 
 
