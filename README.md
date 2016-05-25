@@ -3,7 +3,7 @@
 
 ##Express-Dev
 
-An express wrapper which takes in a [webpack](https://webpack.github.io/) config and retuns you an express app with [webpack dev middleware](https://github.com/webpack/webpack-dev-middleware) and [webpack hot middleware ](https://github.com/glenjamin/webpack-hot-middleware) in the stack. 
+An express wrapper which takes in a [webpack](https://webpack.github.io/) config and returns you an express app with [webpack dev middleware](https://github.com/webpack/webpack-dev-middleware) and [webpack hot middleware ](https://github.com/glenjamin/webpack-hot-middleware) in the stack. 
 
 ```coffeescript
 expressDev = require 'express-dev'
