@@ -1,7 +1,9 @@
-import {expect} from 'chai'
-import expressDev from '../src/index.js'
-import config from './webpack.test.config.js'
-import _ from 'lodash'
+require('babel-register');
+
+import { expect } from 'chai';
+import expressDev from '../src/index.js';
+import config from './webpack.test.config.js';
+import _ from 'lodash';
 
 describe('express-dev', () => {
   it('should return an express instance when passed a config', () => {
