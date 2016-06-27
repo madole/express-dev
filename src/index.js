@@ -5,11 +5,11 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 
 
 export default (webpackConfig) => {
-  if(!webpackConfig) {
+  if (!webpackConfig) {
     throw new Error('ExpressDev requires a config to be passed in');
   }
 
-  if(!webpackConfig.output || !webpackConfig.output.publicPath) {
+  if (!webpackConfig.output || !webpackConfig.output.publicPath) {
     throw new Error('ExpressDev requires a output.publicPath in the config');
   }
 
@@ -18,7 +18,7 @@ export default (webpackConfig) => {
 
   app.use(webpackDevMiddleware(compiler, {
     publicPath: webpackConfig.output.publicPath,
-    stats: {colors: true}
+    stats: { colors: true }
   }));
 
   app.use(webpackHotMiddleware(compiler, {
@@ -26,5 +26,4 @@ export default (webpackConfig) => {
   }));
 
   return app;
-}
-
+};

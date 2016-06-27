@@ -18,9 +18,11 @@
   "devDependencies": {
     "chai": "^3.2.0",
     "lodash": "^3.10.1",
+    "mocha": "^2.5.3",
     "yargs": "^3.24.0"
   },
   "scripts": {
+    "build": "webpack",
     "test": "webpack --test && mocha build/index.js"
   },
   "repository": {
